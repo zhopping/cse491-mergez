@@ -11,11 +11,11 @@ def sum_sq_diff(series):
     series = [ (item-avg)**2 for item in series ]
     total_diff = sum(series)
     
-    return total_diff / float(len(series))
+    return total_diff
 
 def stddev(series):
     "Calculate the standard deviation of the given series."
-    ssd = sum_sq_diff(series)
+    ssd = sum_sq_diff(series) / float(len(series))
     return math.sqrt(ssd)
 
 if __name__ == '__main__':
