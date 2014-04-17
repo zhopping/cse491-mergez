@@ -7,11 +7,10 @@ def sum_sq_diff(series):
     avg = float(total) / float(len(series))
     
     total_diff = 0.
-    for item in series:
-        diff = item - avg
-        diff = diff**2
-        total_diff += diff
 
+    series = [ (item-avg)**2 for item in series ]
+    total_diff = sum(series)
+    
     return total_diff / float(len(series))
 
 def stddev(series):
